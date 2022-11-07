@@ -1,0 +1,1 @@
+let quizButton = document.getElementById('quizButton')

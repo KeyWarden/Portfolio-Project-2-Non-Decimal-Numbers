@@ -92,3 +92,20 @@ h2 {
 #info {
     display: none;
 }
+
+/*quiz page styling*/
+
+#test {
+    width: 700px;
+    height: 400px;
+    margin: 0 auto;
+    background-color: silver;
+}
+
+#score {
+    margin: 0 auto;
+    background-color: silver;
+    width: 150px;
+    padding: 5px;
+    margin-top: 5px;
+}
