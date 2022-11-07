@@ -82,11 +82,11 @@ h2 {
 /*initial page styling*/
 
 #home {
-    display: none;
+    display: block;
 }
 
 #quiz {
-    display: block;
+    display: none;
 }
 
 #info {

@@ -7,6 +7,7 @@
         <meta name="description" content="Learn about and test your ability with Non-Decimal Number Systems">
         <meta name="keywords" content="trivia, history, quiz, mathematics, binary, hexadecimal, numbers">
         <link rel="stylesheet" href="assets/style.css">
+        <script defer src="assets/script.js"></script>
         <title>Non-Decimal Numbers</title>
     </head>
     <body>
@@ -17,9 +18,9 @@
             
             <nav id="menu">
                 <ul>
-                    <li class="active">Home</li>
-                    <li>Quiz</li>
-                    <li>Info</li>
+                    <li class="active" id="homeNav">Home</li>
+                    <li id="quizNav" onclick="openQuiz()">Quiz</li>
+                    <li id="infoNav">Info</li>
                 </ul>
             </nav>
         </header>
