@@ -49,6 +49,33 @@ let answer1H3 = '002AA9';
 let answer2H3 = '10921';
 let answer1C = '00003E';
 let answer2C = '111110';
+let checkChar = '0123456789abcdefABCDEF';
+let checkTriggered = false
+
+function isValid() {
+    if (question === 0) {
+        playQuiz();
+    } else if (quizAnswer.value === '') {
+        alert('Please type something into the answer box.')
+    } else if (quizAnswer.value.length > 6) {
+        alert('None of the answers include more than 6 characters, something has gone wrong. Please double check your answer to confirm no unneeded characters are present.')
+    } else if (question > 0 && quizAnswer.value != '') {
+        for (let char of quizAnswer.value) {
+            if (checkChar.includes(char)) {
+                continue;
+            } else {
+                alert('Invalid character detected. Your answer should only contain the following characters: 0 1 2 3 4 5 6 7 8 9 a A b B c C d D e E f F');
+                checkTriggered = true;
+                break;
+            }
+        }
+        if (!checkTriggered) {
+            playQuiz();
+        } else {
+            checkTriggered = false;
+        }
+    }
+}
 
 function playQuiz() {
     if (question === 0) {
@@ -211,4 +238,4 @@ function playQuiz() {
     }
 }
 
-testButton.addEventListener('click', playQuiz)
+testButton.addEventListener('click', isValid)
