@@ -11,18 +11,27 @@ function openHome() {
     home.style.display = 'block';
     quiz.style.display = 'none';
     info.style.display = 'none';
+    homeNav.style.border = '1px solid greenyellow';
+    quizNav.style.border = 'none';
+    infoNav.style.border = 'none';
 }
 
 function openQuiz() {
     home.style.display = 'none';
     quiz.style.display = 'block';
     info.style.display = 'none';
+    quizNav.style.border = '1px solid greenyellow';
+    homeNav.style.border = 'none';
+    infoNav.style.border = 'none';
 }
 
 function openInfo() {
     home.style.display = 'none';
     quiz.style.display = 'none';
     info.style.display = 'block';
+    infoNav.style.border = '1px solid greenyellow';
+    quizNav.style.border = 'none';
+    homeNav.style.border = 'none';
 }
 
 homeNav.addEventListener('click', openHome)
