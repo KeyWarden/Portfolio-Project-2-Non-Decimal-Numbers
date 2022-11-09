@@ -93,6 +93,12 @@ h2 {
     display: none;
 }
 
+hr {
+    width: 98%;
+    border: 1px solid none;
+    margin: 0 auto;
+}
+
 /*quiz page styling*/
 
 #test {
@@ -107,5 +113,14 @@ h2 {
     background-color: silver;
     width: 150px;
     padding: 5px;
+    margin-top: 5px;
+}
+
+#testFeedback {
+    margin: 0 auto;
+    background-color: silver;
+    width: 400px;
+    padding: 5px;
+    height: 200px;
     margin-top: 5px;
 }

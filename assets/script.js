@@ -7,8 +7,6 @@ let home = document.getElementById('home')
 let quiz = document.getElementById('quiz')
 let info = document.getElementById('info')
 
-
-
 function openHome() {
     home.style.display = 'block';
     quiz.style.display = 'none';
