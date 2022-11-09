@@ -30,6 +30,7 @@ footer {
 h1 {
     letter-spacing: 3px;
     color: black;
+    padding-top: 5px;
 }
 
 #title {
@@ -106,6 +107,8 @@ hr {
     height: 400px;
     margin: 0 auto;
     background-color: silver;
+    text-align: center;
+    padding: 5px;
 }
 
 #score {
@@ -123,4 +126,24 @@ hr {
     padding: 5px;
     height: 200px;
     margin-top: 5px;
+}
+
+#test h2 {
+    float: none;
+    margin-left: 0;
+}
+
+#test hr {
+    border: 5px solid none;
+    padding-top: 5px;
+}
+
+#testButton {
+    float: none;
+    width: 50px;
+    margin: 0 auto;
+}
+
+#quizAnswer {
+    display: none;
 }
