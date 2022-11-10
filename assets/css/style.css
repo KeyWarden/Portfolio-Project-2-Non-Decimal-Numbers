@@ -23,8 +23,13 @@ header {
 footer {
     height: 70px;
     width: 100%;
-    position: absolute;
+    position: fixed;
     bottom: 0;
+}
+
+#footerSpace {    
+    height: 70px;
+    width: 100%;
 }
 
 h1 {
@@ -132,15 +137,6 @@ hr {
     margin-top: 5px;
 }
 
-#testFeedback {
-    margin: 0 auto;
-    background-color: silver;
-    width: 400px;
-    padding: 5px;
-    height: 200px;
-    margin-top: 5px;
-}
-
 #test h2 {
     float: none;
     margin-left: 0;
@@ -159,4 +155,52 @@ hr {
 
 #quizAnswer {
     display: none;
+}
+
+/*styling for info page*/
+
+#infoContent, #infoContent h2, #infoContent p {
+    text-align: center;
+    float: none;
+    margin: 0 auto;
+}
+
+/*socials styling */
+
+#socials {
+    font-size: 200%;
+    text-align: center;
+}
+
+#socials li {
+    float: none;
+    list-style-type: none;
+    margin: 0 auto;
+    padding: 20px;
+    display: inline-block;
+}
+
+#socials a {
+    text-decoration: none;
+    color: black;
+}
+
+#socials a:hover {
+    color: greenyellow;
+}
+
+/*styling for changing screensizes*/
+
+@media screen and (max-width: 715px) {
+    #test {
+        width: 500px;
+        height: auto;
+    }
+}
+
+@media screen and (max-width: 520px) {
+    #test {
+        width: 300px;
+        height: auto;
+    }
 }

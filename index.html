@@ -6,44 +6,49 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta name="description" content="Learn about and test your ability with Non-Decimal Number Systems">
         <meta name="keywords" content="trivia, history, quiz, mathematics, binary, hexadecimal, numbers">
-        <link rel="stylesheet" href="assets/style.css">
-        <script defer src="assets/script.js"></script>
+        <link rel="stylesheet" href="assets/css/style.css">
+        <script defer src="assets/javascript/script.js"></script>
         <title>Non-Decimal Numbers</title>
     </head>
     <body>
         <header>
-                <h1 id="title">Non-Decimal Numbers</h1>
+            <!--header, containing title and main navigation elements-->
+            <h1 id="title">Non-Decimal Numbers</h1>
             
             <nav id="menu">
                 <ul>
                     <li id="homeNav">Home</li>
-                    <li id="quizNav" onclick="openQuiz()">Quiz</li>
+                    <li id="quizNav">Quiz</li>
                     <li id="infoNav">Info</li>
                 </ul>
             </nav>
         </header>
 
+        <!--rather than seperate pages, all pages are located here, and which is visible changes based on the buttons clicked, as determined by js and css files-->
+
         <section id="home">
+            <!--home page code, containing intro section, instructions, and trivia-->
             <div id="intro">
                 <h2>Introduction</h2>
-                <p class="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-                <p class="button" id="infoButton">Click Here for More Information</p>
+                <p class="text">It is easy, at first, to fall into the trap of viewing non-decimal number systems, such as binary or hexadecimal, as strange or other in comparison to decimal numbers. After all, they have all these extra zeros in front of the numbers at times, and some even contain letters! But the truth is that all number systems, including decimal, run on the same logic, we're just taught decimal so completely, that reading it becomes second nature.<br><br>In this site, we hope to teach you not only how to read and understand two of the most prominent non-decimal numbers - binary with a base of 2, which is one of the most commonly known, and hexadecimal with a base of 16, which is used in many fields, such as in representing colours in CSS - we also hope to teach you the basics of reading and understanding any base number system.</p>
+                <p class="button" id="infoButton">Click Here for More Information</p> <!--secondary button to navigate to info page-->
             </div>
             <hr>
             <div id="how-to">
                 <h2>How to read Non-Decimal Numbers</h2>
-                <p class="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-                <p class="button" id="quizButton">Click Here for a Quiz on the Subject</p>
+                <p class="text">At the core, all number systems operate the same way. Each digit, from right to left, represents an ascending power of the base number, starting from a power of 0. Each digit can go up to 1 less than the base number. Finally, the end value of the number is calculated by multiplaying each digit by the base number to the power of its position, and then adding them together. Sounds tricky right?<br><br>Thankfully, things are simpler than they sound. Let's take a decimal number, 192, as an example. The three digits are powers of 10 in the following order: (power of 2), (power of 1), (power 0f 0). In other words, they represent multiples of 100, 10, and 1 respectively. Therefore, to get the final answer of one-hundred-and-ninety-two, we first take each of the given digits and multiply them by the position (1*100, 9*10, 2*1), giving 100, 90 and 2 respectively. Then we add them up, and get 192.<br><br>Therefore, if we were to instead take a base 16 system (hexadecimal), and use the same digits, 192, we can calculate an answer (1*16^2 + 9*16^1 + 2*16^0 = 1*256 + 9*16 + 2*1 = 256 + 144 + 2 = 402 in decimal).<br><br>However, we cannot use 192 in any base number system with a base lower than 10, because the highest any digit in a base number system can go is one less than the base number itself.<br><br>That covers the basics of how all number systems are framed, but where do the letters in some numbers, like hexadecimal, come from? As mentioned each digit can contain a value up to 1 less than the base, but when you exceed 10 in the base, this means needing to include a value we have no way to represent numerically except with multiple digits, which violates the underlying principle of all base number systems. Therefore, and alternative is needed, and provided: letters.<br><br>More specifically, letters A through Z can easily represent numbers 10 through 35 respectively with a single digit, so in number systems of base 11 through to 36, the relevant letters are used instead of double-digit numbers.<br><br>Things become more difficult past that point, so it is highly recommended you research any higher number system you may intend to use before commiting. They shall not be covered here regardless.</p>
+                <p class="button" id="quizButton">Click Here for a Quiz on the Subject</p><!--secondary button to navigate to quiz page-->
             </div>
             <hr>
             <div id="trivia">
                 <h2>Additional Trivia</h2>
-                <p class="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                <p class="text">Beyond this, there is another category of base number system that we have not covered, and will not be testing you on, as it is more advanced: negative base numbers. Negative number systems are, at a glance, indistinguishable from positive ones. This is because you do not use negative numbers in the digits for a negative system, only positive ones that are still at most 1 less than the base would be if it were positive.<br><br>For example, in negabinary (base -2), you still only use 1s and 0s. However, each digit is a power of -2. To provide a further example: the number 3 in normal binary using 3 digits is 011 (0*4 + 1*2 + 1*1 = 2 + 1 = 3), but in negabinary it is 111 (1*(-2)^2 + 1*(-2)^1 + 1*(-2)^0 = 1*4 + 1(-2) + 1*1 = 4 - 2 + 1 = 3). This is interesting not only for the obvious reason of making the number inherently more complex, but also because it breaches a rule not touched on above.<br><br>In positive base numbers, a rule of thumb that always applies is that if the number is less than one of the values a digit represents, then the end result will require 1 fewer digits than that to convey. For example in decimal the third digit (right to left) represents 100, so if the number being represented is less than 100, it only needs to digits to represent, such as 99. In the prior binary example, because 3 is less than 4 and the third digit represents 4, only two digits are needed to convey it.<br><br>In negative systems, however, some of the digits represent negative values, meaning that you may require digits representing greater values to convey a smaller number due to the subtractions. In the given negabinary example, 3 requires 3 digits to convey because even though it is less than the value of the third digit - 4 - there is no way to add a -2 and 1 together in such a way as to create 3, meaning that you need 4 in order to make 3 possible.<br><br>Again, negative base numbers are not common and are very tricky to work with for obvious reasons, so we will not be testing you on them, but theya re truly fascinating to consider.</p>
             </div>
             <hr>
         </section>
 
         <section id="quiz">
+            <!--quiz page code, containing the quiz and the score-->
             <div id="test">
                 <h2 id="quizTitle">Welcome to the Quiz!</h2>
                 <hr>
@@ -55,24 +60,47 @@
             </div>
             <div id="score">
                 <h3>Current Score: 0/7</h3>
-            </div>
-            <div id="testFeedback">
-            </div>
-            <div class="userFeedback">
-            </div>            
+            </div>         
         </section>
         
         <section id="info">
+            <!--info page code, containing sources for all information-->
             <div id="infoContent">
-                <h2>History & Information</h2>
-                <p class="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-            </div>
-            <div class="userFeedback">
-            </div>            
+                <h2>Sources for more information</h2>
+                <hr>
+                <p class="text">If you would like to learn more about non-decimal numbers, than please check out the following leaks, which includes where we source our information.</p>
+                <hr>
+                <p class="text">For Binary:<br><br> <a href="https://en.wikipedia.org/wiki/Binary_number" target="_blank" rel="noopener">Wikipedia</a>, <a href="https://www.britannica.com/science/binary-number-system" target="_blank" rel="noopener">Britannica</a>, <a href="https://www.bbc.co.uk/bitesize/guides/zwk8tv4/revision/1" target="_blank" rel="noopener">BBC</a></p>
+                <hr>
+                <p class="text">For Hexadecimal:<br><br> <a href="https://en.wikipedia.org/wiki/Hexadecimal" target="_blank" rel="noopener">Wikipedia</a>, <a href="https://www.lifewire.com/what-is-hexadecimal-2625897" target="_blank" rel="noopener">Lifewire</a>, <a href="https://www.bbc.co.uk/bitesize/guides/zp73wmn/revision/1" target="_blank" rel="noopener">BBC</a></p>
+                <hr>
+                <p class="text">For Negative Number Systems:<br><br> <a href="https://en.wikipedia.org/wiki/Negative_base" target="_blank" rel="noopener">Wikipedia</a></p>
+            </div>    
         </section>
 
-        <footer>
+        <hr>
+        <br>
+        <br>
+        <br>
 
+        <div id="footerSpace"><!--guarantees that nothing is overlapped by the footer--></div>
+
+        <footer>
+            <!--footer containing link to socials-->
+            <div id="socials">
+                <ul>
+                    <li>
+                        <a href="https://en-gb.facebook.com/" target="_blank" rel="noopener"><i class="fab fa-facebook-square"></i></a>
+                    </li>
+                    <li>
+                        <a href="https://twitter.com" target="_blank" rel="noopener"><i class="fab fa-twitter-square"></i></a>
+                    </li>
+                    <li>
+                        <a href="https://www.youtube.com" target="_blank" rel="noopener"><i class="fab fa-youtube-square"></i></a>
+                    </li>                
+                </ul>
+            </div>
         </footer>
+        <script src="https://kit.fontawesome.com/519c91806a.js" crossorigin="anonymous"></script> <!--script allows use of icons for socials-->
     </body>
 </html>

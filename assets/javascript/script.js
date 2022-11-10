@@ -1,3 +1,5 @@
+
+//acquiring navigation elements
 let quizButton = document.getElementById('quizButton')
 let infoButton = document.getElementById('infoButton')
 let homeNav = document.getElementById('homeNav')
@@ -7,6 +9,7 @@ let home = document.getElementById('home')
 let quiz = document.getElementById('quiz')
 let info = document.getElementById('info')
 
+//creating functions to manage navigation between pages
 function openHome() {
     home.style.display = 'block';
     quiz.style.display = 'none';
@@ -34,12 +37,14 @@ function openInfo() {
     homeNav.style.border = 'none';
 }
 
+//creating triggers to control navigation
 homeNav.addEventListener('click', openHome)
 quizNav.addEventListener('click', openQuiz)
 infoNav.addEventListener('click', openInfo)
 quizButton.addEventListener('click', openQuiz)
 infoButton.addEventListener('click', openInfo)
 
+//acquiring variables to control the quiz
 let question = 0;
 let answered = 0;
 let score = 0;
@@ -61,6 +66,7 @@ let answer2C = '111110';
 let checkChar = '0123456789abcdefABCDEF';
 let checkTriggered = false
 
+//creating function to validate answers
 function isValid() {
     if (question === 0) {
         playQuiz();
@@ -86,6 +92,7 @@ function isValid() {
     }
 }
 
+//creating function to progress the quiz
 function playQuiz() {
     if (question === 0) {
         quizTitle.innerHTML = `Binary 1`;
@@ -247,4 +254,6 @@ function playQuiz() {
     }
 }
 
-testButton.addEventListener('click', isValid)
+//creating trigger to control the quiz button
+testButton.addEventListener('click', isValid);
+
